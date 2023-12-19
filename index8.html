@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style8.css" type="text/css" />
+    <title>Task 8</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <button data-modal-target="#modal" id="showForm">Открыть форму</button>
+
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Форма</div>
+        <button data-close-button class="close-button">Назад</button>
+      </div>
+      <form
+        class="modal-body formcarryForm"
+        id="myForm"
+        action="https://formcarry.com/s/7hcQamA0Or"
+        enctype="multipart/form-data"
+      >
+        <div class="input-control">
+          <label for="name">ФИО:</label>
+          <input type="text" id="name" name="name" />
+          <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+          <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="phone">Телефон:</label>
+          <input type="text" id="phone" name="phone" />
+          <div class="error"></div>
+        </div>
+
+        <label for="organization">Организация:</label>
+        <input type="text" id="organization" name="organization" />
+
+        <label for="message">Сообщение:</label>
+        <textarea id="message" class="text-area" name="message"></textarea>
+
+        <label for="agree"
+          >Согласие с политикой обработки персональных данных:</label
+        >
+        <div class="input-control">
+          <input type="checkbox" id="agree" name="agree" />
+          <div class="error"></div>
+        </div>
+
+        <button type="submit" id="submitForm">Отправить</button>
+      </form>
+    </div>
+    <div id="messageBox" class="messageBox"></div>
+    <div id="overlay"></div>
+    <script src="JS/form_valid.js"></script>
+    <script src="JS/local_storage.js"></script>
+    <script src="JS/popup.js"></script>
+    <script src="JS/send_form.js"></script>
+  </body>
+</html>
